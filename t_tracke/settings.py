@@ -2,7 +2,7 @@
 import os
 from pathlib import Path
 import cloudinary
-from decouple import config,Csv
+from decouple import config
 import dj_database_url
 import django_heroku
 from django.contrib.messages import constants
@@ -40,7 +40,7 @@ DATABASES = {
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

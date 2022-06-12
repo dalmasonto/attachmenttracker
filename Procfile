@@ -1,0 +1,1 @@
+web: waitress-serve --listen=*:8000 t_tracke.wsgi:application --log-file -
